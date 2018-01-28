@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/background_light">
+
+    <ImageButton
+        android:id="@+id/my_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/myDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/my_image"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/my_image"
+        android:background="#444444"
+        android:gravity="center"
+        android:text="My Details"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/firstNameView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/my_image"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="37dp"
+        android:ems="15"
+        android:text="First name "
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/lastNameView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/firstNameView"
+        android:layout_alignStart="@+id/firstNameView"
+        android:layout_below="@+id/firstNameView"
+        android:layout_marginTop="29dp"
+        android:ems="15"
+        android:text="Last Name"
+        android:textColor="@android:color/black" />
+
+
+</RelativeLayout>

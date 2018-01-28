@@ -1,0 +1,170 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/laundry_login">
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/firstNameText"
+            android:layout_alignRight="@+id/firstNameText"
+            android:layout_below="@+id/firstNameText"
+            android:addStatesFromChildren="true"
+            android:background="@android:drawable/edit_text"
+            android:baselineAligned="false"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/show_hide"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/show" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/signin2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:hint="Sign in"
+            android:onClick="action"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/firstNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signin2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="9dp"
+            android:ems="13"
+            android:hint="First Name"
+            android:inputType="textPersonName"
+            android:maxLength="30" />
+
+        <EditText
+            android:id="@+id/lastNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/rl"
+            android:layout_alignStart="@+id/rl"
+            android:layout_below="@+id/firstNameText"
+            android:ems="13"
+            android:hint="Last Name"
+            android:inputType="textPersonName"
+            android:maxLength="50" />
+
+        <EditText
+            android:id="@+id/mobileNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/lastNameText"
+            android:layout_alignStart="@+id/lastNameText"
+            android:layout_below="@+id/lastNameText"
+            android:ems="13"
+            android:hint="Mobile Number"
+            android:inputType="phone"
+            android:maxLength="10" />
+
+        <EditText
+            android:id="@+id/emailIdText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/mobileNumberText"
+            android:layout_alignStart="@+id/mobileNumberText"
+            android:layout_below="@+id/mobileNumberText"
+            android:ems="13"
+            android:hint="Email ID"
+            android:inputType="textEmailAddress"
+            android:maxLength="100" />
+
+        <EditText
+            android:id="@+id/address1Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/emailIdText"
+            android:layout_alignStart="@+id/emailIdText"
+            android:layout_below="@+id/emailIdText"
+            android:ems="13"
+            android:hint="Address 1"
+            android:inputType="textPersonName"
+            android:maxLength="100" />
+
+        <EditText
+            android:id="@+id/address2Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/address1Text"
+            android:layout_alignStart="@+id/address1Text"
+            android:layout_below="@+id/address1Text"
+            android:ems="13"
+            android:hint="Address 2"
+            android:inputType="textPersonName"
+            android:maxLength="100" />
+
+        <EditText
+            android:id="@+id/pinCodeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/address2Text"
+            android:layout_alignStart="@+id/address2Text"
+            android:layout_below="@+id/address2Text"
+            android:ems="13"
+            android:hint="Pin Code"
+            android:inputType="number"
+            android:maxLength="6" />
+
+        <CheckBox
+            android:id="@+id/shopOwnerCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/passwordText"
+            android:layout_alignStart="@+id/passwordText"
+            android:layout_below="@+id/passwordText"
+            android:layout_marginTop="9dp"
+            android:hint="For Shop Owners" />
+
+        <Button
+            android:id="@+id/loginSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/passwordText"
+            android:layout_alignStart="@+id/passwordText"
+            android:layout_below="@+id/passwordText"
+            android:layout_marginTop="72dp"
+            android:hint="Continue ..."
+            android:onClick="action"
+            android:paddingBottom="10dp"
+            android:paddingLeft="100dp"
+            android:paddingRight="100dp"
+            android:paddingTop="10dp"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/passwordText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/pinCodeText"
+            android:layout_alignStart="@+id/pinCodeText"
+            android:layout_below="@+id/pinCodeText"
+            android:ems="13"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:maxLength="8" />
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,153 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/background_light"
+    android:visibility="visible">
+
+    <ImageButton
+        android:id="@+id/sp_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/sp_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/sp_image"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/sp_image"
+        android:background="#444444"
+        android:gravity="center"
+        android:text="Please fill details"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/optionsScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/sp_image"
+        android:layout_marginTop="13dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/sp_image"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">-->
+
+    <RadioGroup
+        android:id="@+id/optionsGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/sp_image"
+        android:layout_below="@+id/sp_image"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp" />
+
+    <!--</LinearLayout>
+    </ScrollView>-->
+
+    <Spinner
+        android:id="@+id/clothList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="25dp" />
+
+    <EditText
+        android:id="@+id/quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/clothList"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="12dp"
+        android:ems="8"
+        android:hint="Quantity"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/pickUpDateEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/quantity"
+        android:layout_below="@+id/quantity"
+        android:layout_marginTop="20dp"
+        android:ems="6"
+        android:inputType="date" />
+
+    <EditText
+        android:id="@+id/pickUpTimeEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/pickUpDateEdit"
+        android:layout_below="@+id/pickUpDateEdit"
+        android:ems="6"
+        android:inputType="time" />
+
+    <TextView
+        android:id="@+id/pickUpDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/pickUpDateEdit"
+        android:layout_alignBottom="@+id/pickUpDateEdit"
+        android:layout_alignStart="@+id/clothList"
+        android:text="Pick-Up Date"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/pickUpTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/pickUpTimeEdit"
+        android:layout_alignBottom="@+id/pickUpTimeEdit"
+        android:layout_alignStart="@+id/pickUpDate"
+        android:text="Pick-Up Time"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        android:typeface="normal" />
+
+    <Button
+        android:id="@+id/placeOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:height="45dp"
+        android:background="#edb16d"
+        android:ems="10"
+        android:onClick="placeOrder"
+        android:text="Submit" />
+
+    <ImageView
+        android:id="@+id/myCalender"
+        android:layout_width="@android:dimen/app_icon_size"
+        android:layout_height="@android:dimen/app_icon_size"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/pickUpDateEdit"
+        android:src="@drawable/calendericon" />
+
+    <ImageView
+        android:id="@+id/myClock"
+        android:layout_width="@android:dimen/app_icon_size"
+        android:layout_height="@android:dimen/app_icon_size"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/myCalender"
+        android:src="@drawable/my_clock" />
+
+</RelativeLayout>
