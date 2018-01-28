@@ -89,9 +89,8 @@ public class Login extends Activity{
 				overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 				finish();
 			} else {
-				show("Wrong Password or Mobile number.");
+				show("Wrong Password or Mobile Number.");
 			}
-			
 		}
 		break;
 	}
